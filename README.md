@@ -1,10 +1,14 @@
-Start Up For React JS 
-With babel and Webpack
+**Menu and Sidebar**
 
-Also included CSS Loaders.
+Include Menu and Sidebar
 
+Props:
 
+navItems = an Array of Items to set as navigation tabs and side bar tabs
 
-open terminal
-type: npm install
-type: run npm start
+status = A boolean to say whether the side bar is visible or not
+
+toggleSideBar() = function to set status to oppposite of current.
+
+example - `<MenuAndSlider navItems={navItems} status={this.state.status} toggleSideBar={()=>this.toggleSideBar()} />`
+
