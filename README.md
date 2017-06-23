@@ -1,4 +1,7 @@
 Start Up For React JS 
 With babel and Webpack
 
-run npm start
+
+open terminal
+type: npm install
+type: run npm start
