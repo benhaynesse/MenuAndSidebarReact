@@ -16,13 +16,16 @@ class MenuAndSidebar extends Component {
         this.props.toggleSideBar();
     }
 
-    render() {        
+    
+
+    render() {
+               
         return (
             <div>
                 <MenuBar openSideBar={() => this.openSideBar()} status={this.props.status}
                     navItems={this.props.navItems} />
-                <SideBar closeSideBar={() => this.closeSideBar()} status={this.props.status}
-                    navItems={this.props.navItems} />
+            <SideBar closeSideBar={() => this.closeSideBar()} status={this.props.status}
+                    navItems={this.props.navItems} width={this.props.width}/>
             </div>
         )
     }

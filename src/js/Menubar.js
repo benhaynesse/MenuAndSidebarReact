@@ -4,11 +4,13 @@ import style from '../style/menu.css';
 
 class MenuBar extends Component {
 
+    //Sets the state in main class to true so side bar will open.
     openSideBar(){
         this.props.openSideBar();
     }
 
-    render() {      
+    render() {   
+        //Get the navigation items and puts them in an item array for rendering.   
         let navItems;
         if(this.props.navItems){
             navItems = this.props.navItems.map(item => {

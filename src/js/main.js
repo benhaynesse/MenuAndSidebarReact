@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 
 import MandS from './MenuAndSidebar';
 
-
 import style from '../style/main.css';
 
 
@@ -14,9 +13,9 @@ class App extends Component{
         super();
         this.state={
             sidebar:false            
-        } 
+        }
+        this.width = "250px"; 
     }
-
 
     toggleSideBar(){
         let status = !this.state.sidebar;
@@ -24,21 +23,19 @@ class App extends Component{
     }
 
     render(){
-        let navItems = ["Home", "About", "Services", "Contact", "TESTING"];
+        let navItems = ["Home", "About", "Services", "Contact"];
 
         if(this.state.sidebar){
-            document.getElementById('main').style.marginLeft = '250px';
+            document.getElementById('main').style.marginLeft = this.width;
         }else{
-            if(document.getElementById('side-menu')){
+            if(document.getElementById('main')){
                 document.getElementById('main').style.marginLeft = '0';
             }            
         }
 
         return (
             <div>
-            <MandS
-            navItems={navItems} 
-            status={this.state.sidebar}
+            <MandS navItems={navItems} status={this.state.sidebar}
             toggleSideBar={()=>this.toggleSideBar()}                       
             />
             <div id="main">

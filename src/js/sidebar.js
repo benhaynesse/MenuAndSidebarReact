@@ -11,7 +11,13 @@ class Sidebar extends Component{
         
         //If status is true then open sidebar. Status is set by clicking from the menu.
         if(this.props.status){
-            document.getElementById('side-menu').style.width = '250px';
+            let width;
+            if(this.props.width){
+                width=this.props.width;
+            }else{
+                width="250px";
+            }
+            document.getElementById('side-menu').style.width = width;
         }else{
             if(document.getElementById('side-menu')){
                 document.getElementById('side-menu').style.width = '0';
